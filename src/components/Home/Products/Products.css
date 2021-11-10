@@ -1,0 +1,24 @@
+.bg-color{
+    background-color: #FFF0EE;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.text-color{
+    color: black;
+    padding-top: 80px;
+}
+
+/* Make it responsive */
+@media only screen and (max-width:688px) {
+    .product-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (min-width:689px) and (max-width:991px) {
+    .product-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
