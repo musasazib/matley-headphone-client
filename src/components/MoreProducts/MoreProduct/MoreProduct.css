@@ -1,0 +1,19 @@
+.service-product{
+    background-color: rgb(236, 231, 223);
+}
+.service-img{
+    width: 400px;
+    height: 230px;
+}
+.btn-service{
+    background-color: tomato;
+    font-weight: bold;
+    color: white;
+}
+.btn-service:hover{
+    background-color: skyblue;
+    color: black;
+}
+.body-text{
+    color: rgb(179, 101, 82);
+}

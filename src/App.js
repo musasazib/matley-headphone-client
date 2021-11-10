@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import Home from './components/Home/Home/Home';
-import Products from './components/Home/Products/Products';
+import MoreProducts from './components/MoreProducts/MoreProducts/MoreProducts';
 
 function App() {
   return (
@@ -15,8 +15,8 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/products">
-            <Products />
+          <Route path="/moreProducts">
+            <MoreProducts />
           </Route>
           <Route path="/dashboard">
             <Dashboard />
