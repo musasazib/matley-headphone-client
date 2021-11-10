@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <>
-            <Navbar bg="light" variant="dark" sticky="top" collapseOnSelect expand="lg" >
+            <Navbar className="bg" variant="dark" sticky="top" collapseOnSelect expand="lg" >
                 <Container className="nav-link">
                     <Navbar.Brand as={Link} to="/home"><img
                         src="https://i.ibb.co/72CWtFF/Marley-Logo.png"

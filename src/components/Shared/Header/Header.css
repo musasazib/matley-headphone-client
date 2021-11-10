@@ -3,6 +3,9 @@
     font-size: 20px;
     font-weight: 500;
 }
+.bg{
+    background-color: rgb(247, 245, 245);
+}
 .nav-link a:hover{
     color: tomato;
     font-weight: bold;
