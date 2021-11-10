@@ -1,7 +1,8 @@
 import { useState } from "react";
-import initializeFirebase from "../pages/Login/Firebase/firebase.init";
+
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, updateProfile, signOut } from "firebase/auth";
 import { useEffect } from "react";
+import initializeFirebase from "../components/Login/Firebase/firebase.init";
 
 // Initialize firebase app 
 initializeFirebase();
@@ -25,7 +26,7 @@ const useFirebase = () => {
                 const newUser = { email, displayName: name }
                 setUser(newUser);
                 // save user to the database
-                saveUser(email, name, 'POST');
+                // saveUser(email, name, 'POST');
                 // Send name to firebase after creation
                 updateProfile(auth.currentUser, {
                     displayName: name
@@ -60,8 +61,8 @@ const useFirebase = () => {
         setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then((result) => {
-                const user = result.user;
-                saveUser(user.email, user.displayName, 'PUT')
+                // const user = result.user;
+                // saveUser(user.email, user.displayName, 'PUT')
                 setAuthError('');
                 const destination = location?.state?.from || '/';
                 history.replace(destination);
@@ -101,17 +102,17 @@ const useFirebase = () => {
 
     }
 
-    const saveUser = (email, displayName, method) => {
-        const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
-            method: method,
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        })
-            .then()
-    }
+    // const saveUser = (email, displayName, method) => {
+    //     const user = { email, displayName };
+    //     fetch('http://localhost:5000/users', {
+    //         method: method,
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(user)
+    //     })
+    //         .then()
+    // }
 
     return {
         user,
