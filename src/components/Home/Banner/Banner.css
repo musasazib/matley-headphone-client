@@ -1,0 +1,28 @@
+.banner{
+    height: 500px;
+    padding: 0;
+}
+.banner-btn{
+    margin: 20px;
+}
+.all-btn{
+    background-color: tomato;
+    font-weight: bold;
+    color: white;
+}
+.header-style{
+    color: tomato;
+    font-weight: bold;
+}
+.all-btn:hover{
+    background-color: skyblue;
+    color: black;
+}
+.body-text{
+    color: black;
+}
+.text-box{
+    text-align: start;
+    display: flex;
+    justify-content: center;
+}
