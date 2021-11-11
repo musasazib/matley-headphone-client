@@ -1,0 +1,11 @@
+.header-style{
+    color: tomato;
+    font-weight: bold;
+}
+.btn-book:hover{
+    background-color: skyblue;
+    color: black;
+}
+.header-style-two{
+    color: rgb(95, 72, 68);
+}
