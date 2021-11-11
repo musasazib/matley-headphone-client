@@ -1,8 +1,11 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import Booking from './components/Booking/Booking';
+import AddProduct from './components/Dashboard/AddProduct/AddProduct';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login/Login';
+import Register from './components/Login/Register/Register';
 import MoreProducts from './components/MoreProducts/MoreProducts/MoreProducts';
 import AuthProvider from './context/AuthProvider/AuthProvider';
 
@@ -26,6 +29,15 @@ function App() {
             </Route>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            <Route path="/booking/:productId">
+              <Booking></Booking>
+            </Route>
+            <Route path="/addProduct">
+              <AddProduct></AddProduct>
             </Route>
           </Switch>
         </Router>

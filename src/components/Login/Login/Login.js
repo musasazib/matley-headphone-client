@@ -11,7 +11,7 @@ const Login = () => {
     const location = useLocation();
     const history = useHistory();
 
-    const handleOnChange = e => {
+    const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
         const newLoginData = { ...loginData };
@@ -37,7 +37,7 @@ const Login = () => {
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control
-                                onChange={handleOnChange}
+                                onBlur={handleOnBlur}
                                 name="email"
                                 type="email"
                                 placeholder="Enter email" />
@@ -46,7 +46,7 @@ const Login = () => {
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control
-                                onChange={handleOnChange}
+                                onBlur={handleOnBlur}
                                 name="password"
                                 type="password"
                                 placeholder="Password" />
@@ -64,9 +64,9 @@ const Login = () => {
                         {user?.email && <Alert variant="success">
                             Login successfully </Alert>}
 
-                        {authError && <Alert variant="success">{authError}</Alert>}
+                        {authError && <Alert variant="warning">{authError}</Alert>}
                     </Form>
-                    <p> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+                    <p> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
                     <Button onClick={handleSignInGoogle} variant="primary">Google Sign In</Button>
                 </div>
                 <div className="col-md-6 col-12 d-none d-md-block">
