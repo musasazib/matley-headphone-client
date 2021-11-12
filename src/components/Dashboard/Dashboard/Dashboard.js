@@ -8,6 +8,7 @@ import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import ManageOrders from "../ManageOrders/ManageOrders";
 import ManageProducts from "../ManageProducts/ManageProducts";
 import MyBooking from "../MyBooking/MyBooking";
+import Pay from "../Pay/Pay";
 import Review from "../Review/Review";
 import "./Dashboard.css";
 
@@ -25,6 +26,10 @@ const Dashboard = () => {
                             <h5>Dashboard</h5>
                             <Link to={`${url}`}>
                                 <p className="dashboard-menu"></p>
+                            </Link>
+
+                            <Link to={`${url}/pay`}>
+                                <p className="dashboard-menu">Pay</p>
                             </Link>
 
                             <Link to={`${url}/BookingList`}>
@@ -55,6 +60,9 @@ const Dashboard = () => {
                         <Switch>
                             <Route exact path={path}>
                                 <MyBooking></MyBooking>
+                            </Route>
+                            <Route exact path={`${path}/pay`}>
+                                <Pay></Pay>
                             </Route>
                             <Route exact path={`${path}/review`}>
                                 <Review></Review>

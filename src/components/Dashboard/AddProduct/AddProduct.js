@@ -11,8 +11,8 @@ const AddProduct = () => {
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
         })
-            .then(res =>res.json())
-            .then(data=>{
+            .then(res => res.json())
+            .then(data => {
                 if (data?.insertedId) {
                     alert('Added successfully');
                     reset();
@@ -28,6 +28,7 @@ const AddProduct = () => {
 
                 <input {...register("picture")} placeholder="Image url" />
                 <input {...register("price")} placeholder="price" />
+                <br />
                 <input className="btn-style" type="submit" />
             </form>
         </div>
