@@ -5,6 +5,7 @@ import AdminRoute from "../../Login/AdminRoute/AdminRoute";
 import Header from "../../Shared/Header/Header";
 import AddProduct from "../AddProduct/AddProduct";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
+import ManageOrders from "../ManageOrders/ManageOrders";
 import ManageProducts from "../ManageProducts/ManageProducts";
 import MyBooking from "../MyBooking/MyBooking";
 import Review from "../Review/Review";
@@ -34,7 +35,9 @@ const Dashboard = () => {
                                 <p className="dashboard-menu">Review</p>
                             </Link>
                             {admin && <div>
-                                <p className="dashboard-menu">Orders list</p>
+                                <Link to={`${url}/manageOrders`}>
+                                <p className="dashboard-menu">Manage Orders</p>
+                                </Link>
                                 <Link to={`${url}/addProduct`}>
                                     <p className="dashboard-menu">Add Product</p>
                                 </Link>
@@ -67,6 +70,9 @@ const Dashboard = () => {
                             </AdminRoute>
                             <AdminRoute exact path={`${path}/manageProducts`}>
                                 <ManageProducts></ManageProducts>
+                            </AdminRoute>
+                            <AdminRoute exact path={`${path}/manageOrders`}>
+                                <ManageOrders></ManageOrders>
                             </AdminRoute>
                         </Switch>
                     </div>
