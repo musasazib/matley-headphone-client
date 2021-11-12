@@ -1,3 +1,45 @@
+
+// import React from "react";
+// import { useForm } from "react-hook-form";
+// const MakeAdmin = () => {
+//   const { register, handleSubmit } = useForm();
+
+//   const onSubmit = (data) => {
+//     fetch("http://localhost:5000/makeAdmin", {
+//       method: "PUT",
+//       headers: { "content-type": "application/json" },
+//       body: JSON.stringify(data),
+//     })
+//       .then((res) => res.json())
+//       .then((result) => console.log(result));
+//     console.log(data);
+//   };
+//   return (
+//     <div>
+//       <h1>make admin</h1>
+//       <form onSubmit={handleSubmit(onSubmit)}>
+//         <input
+//           className="input-field"
+//           name="email"
+//           placeholder="Email"
+//           type="email"
+//           {...register("email", { required: true })}
+//         />
+//         <br />
+
+//         <input
+//           className="submit-btn btn btn-danger mt-3"
+//           type="submit"
+//           value="make as Admin"
+//         />
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default MakeAdmin;
+
+
 import React, { useState } from 'react';
 import { Alert, Button, Form } from 'react-bootstrap';
 
@@ -21,7 +63,6 @@ const MakeAdmin = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount) {
-                    console.log(data);
                     setAdminSuccess(true);
                 }
             })
@@ -29,7 +70,7 @@ const MakeAdmin = () => {
     }
     return (
         <div className="login-box w-50 m-auto mt-5">
-            <div className="event-box border border  justify-content-center align-items-center">
+            <div className="event-box border border justify-content-center align-items-center">
                 <h2>Make an Admin</h2>
                 <br />
                 <Form onSubmit={handleAdminSubmit}>

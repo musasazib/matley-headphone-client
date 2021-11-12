@@ -1,0 +1,14 @@
+.dashboard {
+    background-color: rgb(172, 167, 167);;
+    height: 100vh;
+    color: blue;
+    cursor: pointer;
+    padding-top: 50px;
+  }
+  .dashboard-menu {
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+  }
+
+ 

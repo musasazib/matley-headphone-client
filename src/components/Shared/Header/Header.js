@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
-    const { user, logOut } = useAuth();
+    const { user, logout } = useAuth();
     return (
         <>
             <Navbar className="bg" variant="dark" sticky="top" collapseOnSelect expand="lg" >
@@ -23,7 +23,7 @@ const Header = () => {
                         <Nav.Link as={Link} to="/Dashboard">Dashboard</Nav.Link>
 
                         {user.email ?
-                            <Button onClick={logOut} className="logout-btn" as={Link} to="/">Logout</Button> :
+                            <Button onClick={logout} className="logout-btn" as={Link} to="/">Logout</Button> :
                             <Nav.Link as={Link} to="/login">Login</Nav.Link>}
 
 
