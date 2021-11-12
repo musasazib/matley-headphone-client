@@ -119,6 +119,15 @@ const Booking = () => {
                                 type="text"
                             />
                             <br />
+                            <label>status</label>
+                            <br />
+                            <input
+                                {...register("status", { required: true })}
+                                defaultValue="pending"
+                                className="p-2 mb-2"
+                                type="text"
+                            />
+                            <br />
 
                             {errors.exampleRequired && <span>This field is required</span>}
 

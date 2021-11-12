@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import { useForm } from 'react-hook-form';
 
 const ManageOrders = () => {
     const [orders, setOrders] = useState([]);
+    const [orderId, setOrderId] = useState("");
+
+    const { register, handleSubmit } = useForm();
+
     useEffect(() => {
         fetch('http://localhost:5000/orders')
             .then(res => res.json())
@@ -26,6 +31,21 @@ const ManageOrders = () => {
                 })
         }
     }
+    const handleOrderId = (id) => {
+        setOrderId(id);
+        console.log(id);
+    };
+
+    const onSubmit = (data) => {
+        // console.log(data, orderId);
+        fetch(`http://localhost:5000/dorders/${orderId}`, {
+            method: "PUT",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(data),
+        })
+            .then((res) => res.json())
+            .then((result) => console.log('bbbbb',result));
+    };
     return (
         <div>
             <div className="container">
@@ -39,7 +59,9 @@ const ManageOrders = () => {
                             <th>Price</th>
                             <th>Address</th>
                             <th>Phone Number</th>
+                            <th>Status</th>
                             <th>Action</th>
+                            <th>Reject</th>
                         </tr>
                     </thead>
                     {orders?.map((pd, index) => (
@@ -50,6 +72,21 @@ const ManageOrders = () => {
                                 <td>{pd.price}</td>
                                 <td>{pd.address}</td>
                                 <td>{pd.phone}</td>
+                                <td>{pd.status}</td>
+                                <td>
+                                    <form onSubmit={handleSubmit(onSubmit)}>
+                                        <select
+                                            onClick={() => handleOrderId(pd?._id)}
+                                            {...register("status")}
+                                        >
+                                            <option value="approve">Approve</option>
+                                            <option value="shipped ">Shipped </option>
+                                            <option value="done">Done</option>
+                                        </select>
+                                        <input type="submit" />
+
+                                    </form>
+                                </td>
                                 <button
                                     onClick={() => handleDeleteUser(pd._id)}
                                     className="btn-book"

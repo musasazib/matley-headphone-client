@@ -44,6 +44,7 @@ const MyBooking = () => {
                             <th>Price</th>
                             <th>Address</th>
                             <th>Phone Number</th>
+                            <th>Position</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -55,6 +56,7 @@ const MyBooking = () => {
                                 <td>{pd.price}</td>
                                 <td>{pd.address}</td>
                                 <td>{pd.phone}</td>
+                                <td>{pd.status}</td>
                                 <button
                                     onClick={() => handleDeleteUser(pd._id)}
                                     className="btn-book"
