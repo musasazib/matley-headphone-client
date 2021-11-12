@@ -21,39 +21,33 @@ const MakeAdmin = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount) {
-                    // console.log(data);
+                    console.log(data);
                     setAdminSuccess(true);
                 }
             })
         e.preventDefault()
     }
     return (
-        <div>
-            <h2>Make an Admin</h2>
-            <Form onSubmit={handleAdminSubmit}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control
-                                onBlur={handleOnBlur}
-                                name="email"
-                                type="email"
-                                placeholder="Enter email" />
-                        </Form.Group>
+        <div className="login-box w-50 m-auto mt-5">
+            <div className="event-box border border  justify-content-center align-items-center">
+                <h2>Make an Admin</h2>
+                <br />
+                <Form onSubmit={handleAdminSubmit}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control
+                            onBlur={handleOnBlur}
+                            name="email"
+                            type="email"
+                            placeholder="Enter email" />
+                    </Form.Group>
 
-                        <Button variant="primary" type="submit">
-                            Submit
-                        </Button>
-                    </Form>
-            {/* <form onSubmit={handleAdminSubmit}>
-                <TextField
-                    sx={{ width: '50%' }}
-                    label="Email"
-                    type="email"
-                    onBlur={handleOnBlur}
-                    variant="standard" />
-                <Button type="submit" variant="contained">Make Admin</Button>
-            </form> */}
-            {adminSuccess && <Alert severity="success">Made admin successfully</Alert>}
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
+                </Form>
+                {adminSuccess && <Alert variant="success"> Made admin successfully </Alert>}
+            </div>
         </div>
     );
 };
