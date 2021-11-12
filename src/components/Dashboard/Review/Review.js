@@ -1,9 +1,54 @@
 import React from 'react';
+import './Review.css';
+import { useForm } from 'react-hook-form';
+import useAuth from '../../../hooks/useAuth';
 
 const Review = () => {
+    const { user } = useAuth();
+    const { register, handleSubmit, reset } = useForm();
+    const onSubmit = data => {
+        // console.log(data);
+        fetch("http://localhost:5000/reviews", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(data),
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data) {
+                    alert('Added successfully');
+                    reset({name:'', review: '', rating: ''});
+                }
+            })
+    }
     return (
-        <div>
-            <h2>This is review</h2>
+        <div className="add-product">
+            <h2 className="m-5 text-style">Review</h2>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <label className="mt-4">Name:</label>
+                <input
+                    {...register("name")}
+                    Name
+                    defaultValue={user?.displayName}
+                    className="p-2 mb-2"
+                />
+                <label>Review</label>
+                <textarea
+                    {...register("review", { required: true })}
+                    // defaultValue={}
+                    className="p-2 mb-2"
+                    type="text"
+                />
+
+                <label>Rating</label>
+                <input
+                    {...register("rating", { required: true })}
+                    // defaultValue={}
+                    className="p-2 mb-2"
+                    type="number"
+                />
+                <input className="btn-style" type="submit" />
+            </form>
         </div>
     );
 };
