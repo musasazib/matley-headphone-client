@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
+import AdminRoute from "../../Login/AdminRoute/AdminRoute";
 import Header from "../../Shared/Header/Header";
 import AddProduct from "../AddProduct/AddProduct";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
@@ -58,15 +59,15 @@ const Dashboard = () => {
                             <Route exact path={`${path}/BookingList`}>
                                 <MyBooking></MyBooking>
                             </Route>
-                            <Route exact path={`${path}/makeAdmin`}>
+                            <AdminRoute exact path={`${path}/makeAdmin`}>
                                 <MakeAdmin></MakeAdmin>
-                            </Route>
-                            <Route exact path={`${path}/addProduct`}>
+                            </AdminRoute>
+                            <AdminRoute exact path={`${path}/addProduct`}>
                                 <AddProduct></AddProduct>
-                            </Route>
-                            <Route exact path={`${path}/manageProducts`}>
+                            </AdminRoute>
+                            <AdminRoute exact path={`${path}/manageProducts`}>
                                 <ManageProducts></ManageProducts>
-                            </Route>
+                            </AdminRoute>
                         </Switch>
                     </div>
                 </div>
