@@ -4,6 +4,7 @@ import Booking from './components/Booking/Booking';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login/Login';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import Register from './components/Login/Register/Register';
 import MoreProducts from './components/MoreProducts/MoreProducts/MoreProducts';
 import AuthProvider from './context/AuthProvider/AuthProvider';
@@ -23,18 +24,18 @@ function App() {
             <Route path="/moreProducts">
               <MoreProducts />
             </Route>
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard />
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>
             <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path="/booking/:productId">
+            <PrivateRoute path="/booking/:productId">
               <Booking></Booking>
-            </Route>
+            </PrivateRoute>
           </Switch>
         </Router>
       </AuthProvider>
