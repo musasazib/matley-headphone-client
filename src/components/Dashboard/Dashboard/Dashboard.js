@@ -44,6 +44,9 @@ const Dashboard = () => {
                                 <br />
                             </div>}
                             {admin && <div>
+                                <Link to={`${url}`}>
+                                    <p className="dashboard-menu"></p>
+                                </Link>
                                 <Link to={`${url}/manageOrders`}>
                                     <Button className="dashboard-menu">Manage Orders</Button>
                                 </Link>
@@ -72,9 +75,12 @@ const Dashboard = () => {
                     </div>
                     <div className="col-md-9">
                         <Switch>
-                            <Route exact path={path}>
+                            {!admin && <Route exact path={path}>
                                 <MyBooking></MyBooking>
-                            </Route>
+                            </Route>}
+                            <AdminRoute exact path={`${path}`}>
+                                <ManageOrders></ManageOrders>
+                            </AdminRoute>
                             <Route exact path={`${path}/pay`}>
                                 <Pay></Pay>
                             </Route>
