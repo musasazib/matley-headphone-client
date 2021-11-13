@@ -1,0 +1,10 @@
+.not-found-container{
+    text-align: center;
+}
+.error{
+    margin: 75px;
+}
+.error-text-container{
+    padding: 50px;
+    background-color: tomato;
+}
