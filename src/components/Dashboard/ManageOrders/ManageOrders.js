@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { Button, Table } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 
 const ManageOrders = () => {
     const [orders, setOrders] = useState([]);
-    const [orderId, setOrderId] = useState("");
 
-    const { register, handleSubmit } = useForm();
+    const { register } = useForm();
+
+    const [optionValue, SetOptionValue] = useState("");
+    const handleSelectValue = (e) => {
+        SetOptionValue(e.target.value);
+    };
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://sleepy-garden-68669.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [])
@@ -17,7 +21,7 @@ const ManageOrders = () => {
     const handleDeleteUser = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`
+            const url = `https://sleepy-garden-68669.herokuapp.com/orders/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
@@ -31,20 +35,22 @@ const ManageOrders = () => {
                 })
         }
     }
-    const handleOrderId = (id) => {
-        setOrderId(id);
-        console.log(id);
-    };
 
-    const onSubmit = (data) => {
-        // console.log(data, orderId);
-        fetch(`http://localhost:5000/dorders/${orderId}`, {
+    const onSubmit = (id) => {
+        // console.log(data);
+        fetch(`http://localhost:5000/orders/${id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify(data),
+            body: JSON.stringify({ optionValue }),
         })
             .then((res) => res.json())
-            .then((result) => console.log('bbbbb',result));
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    alert('Updated Successfully.');
+                    optionValue({});
+                }
+            });
+
     };
     return (
         <div>
@@ -74,18 +80,18 @@ const ManageOrders = () => {
                                 <td>{pd.phone}</td>
                                 <td>{pd.status}</td>
                                 <td>
-                                    <form onSubmit={handleSubmit(onSubmit)}>
+                                    <div>
                                         <select
-                                            onClick={() => handleOrderId(pd?._id)}
+                                            onChange={handleSelectValue}
                                             {...register("status")}
                                         >
-                                            <option value="approve">Approve</option>
-                                            <option value="shipped ">Shipped </option>
-                                            <option value="done">Done</option>
+                                            <option value="Approved">Approved</option>
+                                            <option value="Shipped">Shipped</option>
+                                            <option value="Done">Done</option>
                                         </select>
-                                        <input type="submit" />
+                                        <Button onClick={() => onSubmit(pd._id)}>Update</Button>
 
-                                    </form>
+                                    </div>
                                 </td>
                                 <button
                                     onClick={() => handleDeleteUser(pd._id)}

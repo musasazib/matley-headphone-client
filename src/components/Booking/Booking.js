@@ -20,15 +20,15 @@ const Booking = () => {
     const [details, setDetails] = useState([]);
     console.log(details)
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://sleepy-garden-68669.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 const book = data.find(td => td._id === productId);
                 setDetails(book)
 
             });
-        
-        fetch('http://localhost:5000/moreProducts')
+
+        fetch('https://sleepy-garden-68669.herokuapp.com/moreProducts')
             .then(res => res.json())
             .then(data => {
                 const book = data.find(td => td._id === productId);
@@ -40,7 +40,7 @@ const Booking = () => {
 
 
     const onSubmit = (data) => {
-        fetch("http://localhost:5000/orders", {
+        fetch("https://sleepy-garden-68669.herokuapp.com/orders", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

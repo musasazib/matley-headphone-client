@@ -4,7 +4,7 @@ import { Table } from 'react-bootstrap';
 const ManageProducts = () => {
     const [product, setProduct] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/moreProducts')
+        fetch('https://sleepy-garden-68669.herokuapp.com/moreProducts')
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [])
@@ -12,7 +12,7 @@ const ManageProducts = () => {
     const handleDeleteUser = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/moreProducts/${id}`
+            const url = `https://sleepy-garden-68669.herokuapp.com/moreProducts/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Banner.css'
 import { Carousel } from 'react-bootstrap';
-import banner from '../../../images/banner.jpg'
+import banner from '../../../images/banar.jpg'
 
 const Banner = () => {
     return (
@@ -15,9 +15,10 @@ const Banner = () => {
                     />
                     <Carousel.Caption className="text-box">
                         <div>
-                            <h1 className="header-style">Refresh your<br />
-                            state of mind.</h1>
-                            <h4 className="body-text">Headphones that make music <br />sound like a celebration and <br />pleasant experience.</h4>
+                            <h2 className="body-text-banner">Find Best</h2>
+                            <h1 className="header-style">Refresh your
+                                state of mind.</h1>
+                            <h5 className="body-text-banner">Headphones that make music sound like a celebration and pleasant experience.</h5>
                             <button className="btn all-btn banner-btn">LEARN MORE</button>
                         </div>
                     </Carousel.Caption>
@@ -30,9 +31,9 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h1 className="header-style">DOING HARD WORK</h1>
-                        <h4 className="body-text">Lorem ipsum dolor sit amet, probo aliquando percipitur ei vel, et vim simul iuvaret.
-                            Mei ad legere eloquentiam. Ad pri habeo adversarium.</h4>
+                        <h2 className="body-text-banner">Live Smart</h2>
+                        <h1 className="header-style">Hear Smart</h1>
+                        <h5 className="body-text-banner">Stylish, folded design with active noise cancellation for crystal clear audio 3.5mm  Wired or Bluetooth wireless conncectivity</h5>
                         <button className="btn all-btn banner-btn">LEARN MORE</button>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -44,8 +45,11 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h1 className="header-style">MAKE IT HAPPEN!</h1>
-                        <h4 className="body-text">WE ARE READY TO FIT YOU.</h4>
+                    <h2 className="body-text-banner">Less Noise</h2>
+                        <h1 className="header-style">More Sound</h1>
+                        <h5 className="body-text-banner">
+                            Headphones that make you forget everything around. Make music come to life.
+                        </h5>
                         <button className="btn all-btn banner-btn">LEARN MORE</button>
                     </Carousel.Caption>
                 </Carousel.Item>

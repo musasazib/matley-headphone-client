@@ -18,10 +18,10 @@
     background-color: skyblue;
     color: black;
 }
-.body-text{
+.body-text-banner{
     color: black;
 }
-.text-box{
+.text-box {
     text-align: start;
     display: flex;
     justify-content: center;

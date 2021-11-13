@@ -8,7 +8,7 @@ import './MoreProducts.css'
 const MoreProducts = () => {
     const [moreProducts, setMoreProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/moreProducts')
+        fetch('https://sleepy-garden-68669.herokuapp.com/moreProducts')
             .then(res => res.json())
             .then(data => setMoreProducts(data));
     }, [])
