@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
+import Footer from '../Shared/Footer/Footer';
+import Header from '../Shared/Header/Header';
 
 const BookingTwo = () => {
     const { user } = useAuth();
@@ -38,7 +40,7 @@ const BookingTwo = () => {
             .then((result) => {
                 if (result.insertedId) {
                     alert('Booking successfully');
-                    reset({ name: '', email: '', ProductName: '', price: '' });
+                    reset({ name: '', email: '', ProductName: '', price: '', status: '' });
                 }
                 console.log(result);
             });
@@ -49,7 +51,8 @@ const BookingTwo = () => {
 
     return (
         <div>
-            <h1 className="pt-5 text-center text-style">
+            <Header></Header>
+            <h1 className="pt-5 text-center text-style header-style">
                 Please Confirm Order
             </h1>
             <div className="login-box w-50 m-auto mt-5">
@@ -119,11 +122,15 @@ const BookingTwo = () => {
 
                             {errors.exampleRequired && <span>This field is required</span>}
 
-                            <input type="submit" className="btn btn-style w-50 mb-5" />
+                            <input type="submit" className="btn btn-product w-50 mb-5" />
                         </form>
                     </div>
                 </div>
             </div>
+            <br />
+            <br />
+            <br />
+            <Footer></Footer>
         </div>
     );
 };

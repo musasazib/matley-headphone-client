@@ -38,7 +38,7 @@ const ManageOrders = () => {
 
     const onSubmit = (id) => {
         // console.log(data);
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://sleepy-garden-68669.herokuapp.com/orders/${id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ optionValue }),

@@ -3,6 +3,8 @@ import './Booking.css';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import Header from '../Shared/Header/Header';
+import Footer from '../Shared/Footer/Footer';
 
 
 const Booking = () => {
@@ -42,7 +44,7 @@ const Booking = () => {
             .then((result) => {
                 if (result.insertedId) {
                     alert('Booking successfully');
-                    reset({ name: '', email: '', ProductName: '', price: '' });
+                    reset({ name: '', email: '', ProductName: '', price: '', status: '' });
                 }
                 console.log(result);
             });
@@ -54,7 +56,8 @@ const Booking = () => {
 
     return (
         <div>
-            <h1 className="pt-5 text-center text-style">
+            <Header></Header>
+            <h1 className="pt-5 text-center header-style">
                 Please Confirm Order
             </h1>
             <div className="login-box w-50 m-auto mt-5">
@@ -124,11 +127,15 @@ const Booking = () => {
 
                             {errors.exampleRequired && <span>This field is required</span>}
 
-                            <input type="submit" className="btn btn-style w-50 mb-5" />
+                            <input type="submit" className="btn btn-product w-50 mb-5" />
                         </form>
                     </div>
                 </div>
             </div>
+            <br />
+            <br />
+            <br />
+            <Footer></Footer>
         </div>
     );
 };
