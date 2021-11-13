@@ -7,6 +7,7 @@ import Login from './components/Login/Login/Login';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import Register from './components/Login/Register/Register';
 import MoreProducts from './components/MoreProducts/MoreProducts/MoreProducts';
+import NotFound from './components/NotFound/NotFound';
 import AuthProvider from './context/AuthProvider/AuthProvider';
 
 function App() {
@@ -36,6 +37,9 @@ function App() {
             <PrivateRoute path="/booking/:productId">
               <Booking></Booking>
             </PrivateRoute>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
         </Router>
       </AuthProvider>
