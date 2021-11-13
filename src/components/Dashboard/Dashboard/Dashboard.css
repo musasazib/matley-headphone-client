@@ -1,14 +1,27 @@
 .dashboard {
-    background-color: rgb(172, 167, 167);;
+    background-color: rgb(74, 73, 75);;
     height: 100vh;
-    color: blue;
+    color: tomato;
     cursor: pointer;
     padding-top: 50px;
+    font-size: 20px;
+    font-weight: 700;
   }
   .dashboard-menu {
     text-decoration: none;
     color: black;
     margin-top: 10px;
+  }
+  .dashboard button{
+    padding: 0;
+    color: white;
+    /* border: none; */
+    background: tomato;
+    width: 200px;
+    padding: 5px;
+    font-size: 18px;
+    margin-right: 10px;
+    font-weight: bold;
   }
 /* Make it responsive */
 @media only screen and (max-width:688px) {

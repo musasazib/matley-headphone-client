@@ -31,32 +31,38 @@ const Dashboard = () => {
                                 </Link>
 
                                 <Link to={`${url}/pay`}>
-                                    <p className="dashboard-menu">Pay</p>
+                                    <Button className="dashboard-menu">Pay</Button>
                                 </Link>
-
+                                <br />
                                 <Link to={`${url}/BookingList`}>
-                                    <p className="dashboard-menu">My Orders</p>
+                                    <Button className="dashboard-menu">My Orders</Button>
                                 </Link>
-
+                                <br />
                                 <Link to={`${url}/review`}>
-                                    <p className="dashboard-menu">Review</p>
+                                    <Button className="dashboard-menu">Review</Button>
                                 </Link>
+                                <br />
                             </div>}
                             {admin && <div>
                                 <Link to={`${url}/manageOrders`}>
-                                    <p className="dashboard-menu">Manage Orders</p>
+                                    <Button className="dashboard-menu">Manage Orders</Button>
                                 </Link>
+                                <br />
                                 <Link to={`${url}/addProduct`}>
-                                    <p className="dashboard-menu">Add Product</p>
+                                    <Button className="dashboard-menu">Add Product</Button>
                                 </Link>
+                                <br />
                                 <Link to={`${url}/makeAdmin`}>
-                                    <p className="dashboard-menu">Make Admin</p>
+                                    <Button className="dashboard-menu">Make Admin</Button>
                                 </Link>
+                                <br />
                                 <Link to={`${url}/manageProducts`}>
-                                    <p className="dashboard-menu">Manage Products</p>
+                                    <Button className="dashboard-menu">Manage Products</Button>
                                 </Link>
                             </div>
                             }
+                            <br />
+                            <hr />
                             <Link to="/home">
                                 <Button className="logout-btn-user mt-5">Back To Home</Button>
                             </Link>
