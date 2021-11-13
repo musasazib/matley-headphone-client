@@ -1,19 +1,26 @@
-.service-product{
-    background-color: rgb(236, 231, 223);
+.bg-pd-color{
+    background-color: white;
+    border-radius: 10px;
 }
-.service-img{
-    width: 400px;
+.product-img{
+    width: 230px;
     height: 230px;
 }
-.btn-service{
+.btn-product{
     background-color: tomato;
     font-weight: bold;
     color: white;
 }
-.btn-service:hover{
+.btn-product:hover{
     background-color: skyblue;
     color: black;
 }
 .body-text{
     color: rgb(179, 101, 82);
+}
+.color-pd-name{
+    color: tomato;
+}
+.about-text{
+    text-align: center;
 }

@@ -3,6 +3,9 @@
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px;
 }
+.bg-user-review{
+    background-color: #DFDCDC;
+}
 
 
 /* Make it responsive */

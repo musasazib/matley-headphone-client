@@ -1,12 +1,18 @@
 import React from 'react';
+import './GetReview.css'
+import Rating from 'react-rating';
 
-const GetReview = ({getReview}) => {
+const GetReview = ({ getReview }) => {
     const { name, review, rating } = getReview;
     return (
-        <div className="service-product pb-3">
+        <div className="review-product pb-3">
             <h3 className="p-2">{name}</h3>
-            <p className="px-2">{review}</p>
-            <p>{rating}</p>
+            <Rating
+                initialRating={rating}
+                emptySymbol="far fa-star icon-color"
+                fullSymbol="fas fa-star icon-color"
+                readonly></Rating>
+            <p className="px-2 user-review">{review}</p>
         </div>
     );
 };
