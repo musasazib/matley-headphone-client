@@ -13,7 +13,7 @@ const Banner = () => {
                         src={banner}
                         alt="First slide"
                     />
-                    <Carousel.Caption className="text-box">
+                    <Carousel.Caption>
                         <div>
                             <h2 className="body-text-banner">Find Best</h2>
                             <h1 className="header-style">Refresh your
