@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-md-3 text-start">
-                            <img className="image-style" src="https://i.ibb.co/9gRJ1Gs/logo-1.png" alt="" style={{ width: "125px" }} />
+                            <img className="image-style" src="https://i.ibb.co/YdmhFHW/comfort-ever-360x.png" alt="" style={{ width: "125px" }} />
                             <p>Copyright © 2019 | All Rights Reserved.</p>
                             <hr />
                         </div>
@@ -24,9 +24,9 @@ const Footer = () => {
                         <div className="col-12 col-md-3 footer-text-all">
                             <h4 className="footer-text footer-h2">About Us</h4>
                             <p className="footer-text">Our Story</p>
-                            <p className="footer-text">Travel Blog & Tips</p>
+                            <p className="footer-text">Information</p>
                             <p className="footer-text">Working With Us</p>
-                            <p className="footer-text">Tour Guid</p>
+                            <p className="footer-text">Shipping Details</p>
                             <p className="footer-text">Be Our Partner</p>
                             <hr />
                         </div>
@@ -35,8 +35,8 @@ const Footer = () => {
                             <p className="footer-text">- Customer Support</p>
                             <p className="footer-text">- Privacy & Policy</p>
                             <p className="footer-text">- Terms & Condition</p>
-                            <p className="footer-text">- Forum</p>
-                            <p className="footer-text">- Tour Guid</p>
+                            <p className="footer-text">- Order Return</p>
+                            <p className="footer-text">- Online Payment</p>
                             {/* <img src={image} alt="" /> */}
                             <hr />
                         </div>
