@@ -29,7 +29,7 @@ const ManageProducts = () => {
     return (
         <div>
             <div className="container">
-                <h2 className="m-5 header-style">Products</h2>
+                <h2 className="m-5 header-style">All Products</h2>
                 <h4 className="m-3 header-style-two">Total Products: {product?.length}</h4>
                 <Table striped bordered hover>
                     <thead>

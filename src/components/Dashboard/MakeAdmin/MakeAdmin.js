@@ -69,9 +69,9 @@ const MakeAdmin = () => {
         e.preventDefault()
     }
     return (
-        <div className="login-box w-50 m-auto mt-5">
+        <div className="login-box w-75 m-auto mt-5">
             <div className="event-box border border justify-content-center align-items-center">
-                <h2>Make an Admin</h2>
+                <h2 className="m-5 header-style">Make an Admin</h2>
                 <br />
                 <Form onSubmit={handleAdminSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">

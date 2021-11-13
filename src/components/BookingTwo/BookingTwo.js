@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import './Booking.css';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
-
-const Booking = () => {
-
+const BookingTwo = () => {
     const { user } = useAuth();
 
     const {
@@ -20,14 +17,13 @@ const Booking = () => {
     const [details, setDetails] = useState([]);
     console.log(details)
     useEffect(() => {
-        fetch('https://sleepy-garden-68669.herokuapp.com/products')
+        fetch('https://sleepy-garden-68669.herokuapp.com/moreProducts')
             .then(res => res.json())
             .then(data => {
                 const book = data.find(td => td._id === productId);
                 setDetails(book)
 
             });
-
     }, [productId, details])
     // const { placeName, price } = details;
 
@@ -49,7 +45,6 @@ const Booking = () => {
 
 
     };
-
 
 
     return (
@@ -133,4 +128,4 @@ const Booking = () => {
     );
 };
 
-export default Booking;
+export default BookingTwo;

@@ -23,7 +23,7 @@ const Review = () => {
     }
     return (
         <div className="add-product">
-            <h2 className="m-5 text-style">Review</h2>
+            <h2 className="m-5 header-style">Review</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label className="mt-4">Name:</label>
                 <input

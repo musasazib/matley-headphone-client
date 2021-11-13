@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Matley Headphone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Client Site [GitHub repository link](https://github.com/programming-hero-web-course-4/niche-website-client-side-musasazib).
+
+This Server Site [GitHub repository link](https://github.com/programming-hero-web-course-4/niche-website-server-side-musasazib).
+
+This project was [Live website link](https://matley-headphone.web.app/).
+
+The Revamp earbuds' housings are crafted from aircraft-grade aluminum and achieve a near-universal fit thanks to two design features unique to V-Moda: first, the conical shape of the metal housing is only slightly larger than the silicone fittings, and this allows the earpieces to rest comfortably just before the deeper crevice of your ear canal.
+
+Keep in mind that you aren't supposed to jam these headphones all the way into your ear canal like the Etymotic ER-4PT MicroPro earphones, but you should still be able to create a tight seal (crucial to getting the best sound) using one of the four sizes of silicone fittings: XS, S, M, and L.
 
 ## Available Scripts
+- Clear, detailed bass performance
+- Wonderful sense of musicality
+- Class-leading battery life
+- Missing Sony’s Multipoint feature
+- Lacking ear tip choices
+- Practically Apple-only
+- Lightweight, comfy and clever
 
-In the project directory, you can run:
+## :bulb: Step-1 :
+### Initial Step
+- [x] Create react app.
+- [x] Router dom install.
+- [x] Create Repository.
 
-### `yarn start`
+## :bulb: Step-2 :
+### Added Navbar components
+- [x] React bootstrap install.
+- [x] Linked the nav link with components.
+- [x] React Hash-tag npm install.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## :bulb: Step-3 :
+### Added Banner components
+- [x] Added Carousel
+- [x] Added Banner images
+- [x] Added banner title & sub title
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## :bulb: Step-4 :
+### Added useAuth components
+- [x] Others ----------
+- [x] Others ----------
+- [x] Others ----------
+- [x] Others ----------
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [x] Firebase
+- [x] Heroku

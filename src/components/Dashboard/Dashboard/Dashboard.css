@@ -10,5 +10,12 @@
     color: black;
     margin-top: 10px;
   }
-
+/* Make it responsive */
+@media only screen and (max-width:688px) {
+  .dashboard {
+    background-color: rgb(172, 167, 167);;
+    height: 30vh;
+    padding-top: 5px;
+  }
+}
  

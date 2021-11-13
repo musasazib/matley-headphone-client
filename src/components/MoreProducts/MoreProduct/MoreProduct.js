@@ -9,7 +9,7 @@ const MoreProduct = ({ moreProduct }) => {
             <img className="product-img" src={picture} alt="" />
             <h3 className="p-2 color-pd-name">{ProductName}</h3>
             <p className="px-2 about-text">{about}</p>
-            <Link to={`/booking/${_id}`}>
+            <Link to={`/bookingTwo/${_id}`}>
                 <Button className="btn btn-product">Add to Cart</Button>
             </Link>
         </div>

@@ -55,9 +55,13 @@ const Dashboard = () => {
                                 <Link to={`${url}/manageProducts`}>
                                     <p className="dashboard-menu">Manage Products</p>
                                 </Link>
-                                <Button onClick={logout} className="logout-btn-user" as={Link} to="/">Logout</Button>
                             </div>
                             }
+                            <Link to="/home">
+                                <Button className="logout-btn-user mt-5">Back To Home</Button>
+                            </Link>
+                            <br />
+                            <Button onClick={logout} className="logout-btn-user mt-2" as={Link} to="/">Logout</Button>
                         </div>
                     </div>
                     <div className="col-md-9">
