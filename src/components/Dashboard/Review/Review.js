@@ -38,6 +38,7 @@ const Review = () => {
                     // defaultValue={}
                     className="p-2 mb-2"
                     type="text"
+                    placeholder="Write your comments about our website"
                 />
 
                 <label>Rating</label>
@@ -46,6 +47,7 @@ const Review = () => {
                     // defaultValue={}
                     className="p-2 mb-2"
                     type="number"
+                    placeholder="Rating our website (Out of 5)"
                 />
                 <input className="btn-style" type="submit" />
             </form>
