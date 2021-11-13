@@ -21,9 +21,9 @@ const Dashboard = () => {
         <div>
             <Header></Header>
             <div className="dashboard-container ">
-                <div className="row">
+                <div className="row" >
                     <div className="col-md-3 ">
-                        <div className="dashboard">
+                        <div className="dashboard mb-5 pb-5">
                             <h5>Dashboard</h5>
                             {!admin && <div>
                                 <Link to={`${url}`}>

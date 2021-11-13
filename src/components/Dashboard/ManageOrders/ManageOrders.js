@@ -7,9 +7,9 @@ const ManageOrders = () => {
 
     const { register } = useForm();
 
-    const [optionValue, SetOptionValue] = useState("");
+    const [optionValue, setOptionValue] = useState("");
     const handleSelectValue = (e) => {
-        SetOptionValue(e.target.value);
+        setOptionValue(e.target.value);
     };
 
     useEffect(() => {
@@ -37,18 +37,19 @@ const ManageOrders = () => {
     }
 
     const onSubmit = (id) => {
-        // console.log(data);
-        fetch(`https://sleepy-garden-68669.herokuapp.com/orders/${id}`, {
+        // console.log(id, optionValue);
+        fetch(`http://localhost:5000/orders/${id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify({ optionValue }),
+            body: JSON.stringify({ status: optionValue }),
         })
             .then((res) => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
                     alert('Updated Successfully.');
-                    optionValue({});
+                    setOptionValue({});
                 }
+                // console.log(optionValue);
             });
 
     };
@@ -83,7 +84,7 @@ const ManageOrders = () => {
                                     <div>
                                         <select
                                             onChange={handleSelectValue}
-                                            {...register("status")}
+                                        // {...register("status")}
                                         >
                                             <option value="Approved">Approved</option>
                                             <option value="Shipped">Shipped</option>
