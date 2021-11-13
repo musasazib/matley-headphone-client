@@ -1,16 +1,16 @@
 import React from 'react';
-import './MoreProduct.css'
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
-const MoreProduct = ({moreProduct}) => {
+const MoreProduct = ({ moreProduct }) => {
     const { _id, picture, ProductName, about } = moreProduct;
     return (
-        <div className="service-product pb-3">
-            <img className="service-img" src={picture} alt="" />
-            <h3 className="p-2">{ProductName}</h3>
-            <p className="px-2">{about}</p>
+        <div className="pb-3 bg-pd-color">
+            <img className="product-img" src={picture} alt="" />
+            <h3 className="p-2 color-pd-name">{ProductName}</h3>
+            <p className="px-2 about-text">{about}</p>
             <Link to={`/booking/${_id}`}>
-                <button className="btn btn-service">BOOKING</button>
+                <Button className="btn btn-product">Add to Cart</Button>
             </Link>
         </div>
     );

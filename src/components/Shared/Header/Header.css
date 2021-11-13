@@ -1,4 +1,4 @@
-.nav-link{
+.nav-link-color{
     color: #333232;
     font-size: 20px;
     font-weight: 500;
@@ -10,20 +10,22 @@
     color: tomato;
     font-weight: bold;
 }
-.logout-btn{
+.logout-btn-user{
     padding: 0;
+    color: tomato;
     border: none;
     background: none;
     font-size: 18px;
     margin-right: 10px;
 }
-.logout-btn:hover{
-    background-color: black;
+.logout-btn-user:hover{
+    background-color: blue;
 }
 .user-name{
     text-decoration: none;
     font-size: 20px;
     color: black;
-    background-color: brown;
+    background-color: tomato;
+    padding: 2px;
 
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import AdminRoute from "../../Login/AdminRoute/AdminRoute";
@@ -14,7 +15,7 @@ import "./Dashboard.css";
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
-    const { admin } = useAuth();
+    const { admin, logout } = useAuth();
 
     return (
         <div>
@@ -24,24 +25,26 @@ const Dashboard = () => {
                     <div className="col-md-3 ">
                         <div className="dashboard">
                             <h5>Dashboard</h5>
-                            <Link to={`${url}`}>
-                                <p className="dashboard-menu"></p>
-                            </Link>
+                            {!admin && <div>
+                                <Link to={`${url}`}>
+                                    <p className="dashboard-menu"></p>
+                                </Link>
 
-                            <Link to={`${url}/pay`}>
-                                <p className="dashboard-menu">Pay</p>
-                            </Link>
+                                <Link to={`${url}/pay`}>
+                                    <p className="dashboard-menu">Pay</p>
+                                </Link>
 
-                            <Link to={`${url}/BookingList`}>
-                                <p className="dashboard-menu">My Orders</p>
-                            </Link>
+                                <Link to={`${url}/BookingList`}>
+                                    <p className="dashboard-menu">My Orders</p>
+                                </Link>
 
-                            <Link to={`${url}/review`}>
-                                <p className="dashboard-menu">Review</p>
-                            </Link>
+                                <Link to={`${url}/review`}>
+                                    <p className="dashboard-menu">Review</p>
+                                </Link>
+                            </div>}
                             {admin && <div>
                                 <Link to={`${url}/manageOrders`}>
-                                <p className="dashboard-menu">Manage Orders</p>
+                                    <p className="dashboard-menu">Manage Orders</p>
                                 </Link>
                                 <Link to={`${url}/addProduct`}>
                                     <p className="dashboard-menu">Add Product</p>
@@ -52,6 +55,7 @@ const Dashboard = () => {
                                 <Link to={`${url}/manageProducts`}>
                                     <p className="dashboard-menu">Manage Products</p>
                                 </Link>
+                                <Button onClick={logout} className="logout-btn-user" as={Link} to="/">Logout</Button>
                             </div>
                             }
                         </div>
