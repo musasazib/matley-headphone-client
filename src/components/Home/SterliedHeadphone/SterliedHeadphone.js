@@ -15,8 +15,19 @@ const SterliedHeadphone = () => {
                     <div className="col-12 col-md-6 text-header">
                         <h4 >Exclusive Headphone</h4>
                         <p className="text-start">
-                            Blandit aliquam etiam erat velit. Mi proin sed libero enim sed faucibus. Faucibus pulvinar elementum integer enim neque volutpat. Euismod in pellentesque massa placerat duis ultricies lacus sed turpis. Aliquet porttitor lacus luctus accumsan tortor posuere. Nisl purus in mollis nunc sed id semper risus. Ultrices neque ornare aenean.
+                            Who are you?’ Instinctively you‘d probably answer that question stating your name, Who are you?’ Instinctively you‘d probably answer that question stating your age background, hobbies and job. hobbies and job.
                         </p>
+                        <h4>World Class Headphone</h4>
+                        <p className="text-start">
+                            Explaining who you truly are, is no topic for small talks. Who are you?’ Instinctively you‘d probably answer that question stating your And there’s no shame in that. Your true identity is an inherently complex phenomenon.
+                        </p>
+                        <h4>Best Headphone Guide</h4>
+                        <p className="text-start">
+                            And there’s no shame in that. Your true identity is an inherently complex phenomenon. You are you — Who are you?’ Instinctively you‘d probably answer that question stating your but how exactly is ‘you'
+                        </p>
+                        <h4>100% Secure Headphone</h4>
+                        <p className="text-start">
+                            Explaining who you truly are, is no topic for small talks. And there’s no shame in that. Who are you?’ Instinctively you‘d probably answer that question stating your Your true identity is an inherently complex phenomenon.</p>
                     </div>
                 </div>
             </div>
