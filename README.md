@@ -1,4 +1,5 @@
 # Matley Headphone
+### Login with email: admin@admin.com and password: 123456 to show admin features
 
 This Client Site [GitHub repository link](https://github.com/programming-hero-web-course-4/niche-website-client-side-musasazib).
 
